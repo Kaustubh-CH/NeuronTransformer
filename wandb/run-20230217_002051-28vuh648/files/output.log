@@ -1,0 +1,30 @@
+
+HERERERERaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  0% 0/360 [00:00<?, ?it/s]/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([16])) that is different to the input size (torch.Size([16, 19])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+Traceback (most recent call last):
+  File "Ntran.py", line 181, in <module>
+    T.train()
+  File "Ntran.py", line 174, in train
+    trainer.train()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1775, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2523, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "Ntran.py", line 58, in compute_loss
+    outputs = model(**inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/models/wav2vec2/modeling_wav2vec2.py", line 1842, in forward
+    loss = loss_fct(logits.view(-1, self.config.num_labels), labels.view(-1))
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 536, in forward
+    return F.mse_loss(input, target, reduction=self.reduction)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 3291, in mse_loss
+    expanded_input, expanded_target = torch.broadcast_tensors(input, target)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/functional.py", line 74, in broadcast_tensors
+    return _VF.broadcast_tensors(tensors)  # type: ignore[attr-defined]
+RuntimeError: The size of tensor a (19) must match the size of tensor b (16) at non-singleton dimension 1

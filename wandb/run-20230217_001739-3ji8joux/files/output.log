@@ -1,0 +1,24 @@
+  0% 0/360 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "Ntran.py", line 181, in <module>
+    T.train()
+  File "Ntran.py", line 174, in train
+    trainer.train()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1775, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2523, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2555, in compute_loss
+    outputs = model(**inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/models/wav2vec2/modeling_wav2vec2.py", line 1841, in forward
+    loss = loss_fct(logits.view(-1, self.config.num_labels), labels.view(-1))
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 3026, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: "nll_loss_forward_reduce_cuda_kernel_2d_index" not implemented for 'Float'

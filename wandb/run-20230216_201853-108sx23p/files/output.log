@@ -1,0 +1,46 @@
+
+HERERERERaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  0% 0/360 [00:00<?, ?it/s]/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/data/data_collator.py:119: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  batch["labels"] = torch.tensor([f["label"] for f in features], dtype=dtype)
+Traceback (most recent call last):
+  File "Ntran.py", line 133, in <module>
+    T.train()
+  File "Ntran.py", line 126, in train
+    trainer.train()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1775, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2523, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "Ntran.py", line 57, in compute_loss
+    outputs = model(**inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/models/wav2vec2/modeling_wav2vec2.py", line 1812, in forward
+    outputs = self.wav2vec2(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/models/wav2vec2/modeling_wav2vec2.py", line 1297, in forward
+    extract_features = self.feature_extractor(input_values)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/models/wav2vec2/modeling_wav2vec2.py", line 451, in forward
+    hidden_states = torch.utils.checkpoint.checkpoint(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/checkpoint.py", line 249, in checkpoint
+    return CheckpointFunction.apply(function, preserve, *args)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/checkpoint.py", line 107, in forward
+    outputs = run_function(*args)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/models/wav2vec2/modeling_wav2vec2.py", line 447, in custom_forward
+    return module(*inputs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/models/wav2vec2/modeling_wav2vec2.py", line 356, in forward
+    hidden_states = self.conv(hidden_states)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Input type (torch.cuda.DoubleTensor) and weight type (torch.cuda.FloatTensor) should be the same

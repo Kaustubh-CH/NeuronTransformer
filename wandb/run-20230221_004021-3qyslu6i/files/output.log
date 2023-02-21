@@ -1,0 +1,325 @@
+
+  0% 0/5760 [00:00<?, ?it/s]/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 19])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+
+
+
+
+
+
+
+
+
+
+
+
+  9% 500/5760 [00:28<04:40, 18.76it/s]Saving model checkpoint to ./results/checkpoint-500
+Configuration saved in ./results/checkpoint-500/config.json
+Model weights saved in ./results/checkpoint-500/pytorch_model.bin
+/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 19])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+
+
+
+
+
+
+
+
+
+
+
+
+ 17% 1000/5760 [00:56<04:17, 18.45it/s]Saving model checkpoint to ./results/checkpoint-1000
+Configuration saved in ./results/checkpoint-1000/config.json
+Model weights saved in ./results/checkpoint-1000/pytorch_model.bin
+/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 19])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+
+
+
+
+ 20% 1177/5760 [01:07<04:06, 18.61it/s]
+{'loss': 0.5024, 'learning_rate': 1.0000000000000002e-06, 'epoch': 0.01}
+{'loss': 0.2918, 'learning_rate': 2.0000000000000003e-06, 'epoch': 0.01}
+{'loss': 0.287, 'learning_rate': 3e-06, 'epoch': 0.02}
+{'loss': 0.5195, 'learning_rate': 4.000000000000001e-06, 'epoch': 0.02}
+{'loss': 0.3647, 'learning_rate': 5e-06, 'epoch': 0.03}
+{'loss': 0.2132, 'learning_rate': 6e-06, 'epoch': 0.03}
+{'loss': 0.2547, 'learning_rate': 7.000000000000001e-06, 'epoch': 0.04}
+{'loss': 0.3119, 'learning_rate': 8.000000000000001e-06, 'epoch': 0.04}
+{'loss': 0.2327, 'learning_rate': 9e-06, 'epoch': 0.05}
+{'loss': 0.247, 'learning_rate': 1e-05, 'epoch': 0.05}
+{'loss': 0.3258, 'learning_rate': 1.1000000000000001e-05, 'epoch': 0.06}
+{'loss': 0.4279, 'learning_rate': 1.2e-05, 'epoch': 0.06}
+{'loss': 0.2898, 'learning_rate': 1.3000000000000001e-05, 'epoch': 0.07}
+{'loss': 0.3488, 'learning_rate': 1.4000000000000001e-05, 'epoch': 0.07}
+{'loss': 0.4698, 'learning_rate': 1.5e-05, 'epoch': 0.08}
+{'loss': 0.4072, 'learning_rate': 1.6000000000000003e-05, 'epoch': 0.08}
+{'loss': 0.3406, 'learning_rate': 1.7000000000000003e-05, 'epoch': 0.09}
+{'loss': 0.4063, 'learning_rate': 1.8e-05, 'epoch': 0.09}
+{'loss': 0.5323, 'learning_rate': 1.9e-05, 'epoch': 0.1}
+{'loss': 0.548, 'learning_rate': 2e-05, 'epoch': 0.1}
+{'loss': 0.2627, 'learning_rate': 2.1e-05, 'epoch': 0.11}
+{'loss': 0.2692, 'learning_rate': 2.2000000000000003e-05, 'epoch': 0.11}
+{'loss': 0.3763, 'learning_rate': 2.3000000000000003e-05, 'epoch': 0.12}
+{'loss': 0.3422, 'learning_rate': 2.4e-05, 'epoch': 0.12}
+{'loss': 0.4558, 'learning_rate': 2.5e-05, 'epoch': 0.13}
+{'loss': 0.2748, 'learning_rate': 2.6000000000000002e-05, 'epoch': 0.14}
+{'loss': 0.4246, 'learning_rate': 2.7000000000000002e-05, 'epoch': 0.14}
+{'loss': 0.2773, 'learning_rate': 2.8000000000000003e-05, 'epoch': 0.15}
+{'loss': 0.3681, 'learning_rate': 2.9e-05, 'epoch': 0.15}
+{'loss': 0.2644, 'learning_rate': 3e-05, 'epoch': 0.16}
+{'loss': 0.3502, 'learning_rate': 3.1e-05, 'epoch': 0.16}
+{'loss': 0.3147, 'learning_rate': 3.2000000000000005e-05, 'epoch': 0.17}
+{'loss': 0.5557, 'learning_rate': 3.3e-05, 'epoch': 0.17}
+{'loss': 0.4611, 'learning_rate': 3.4000000000000007e-05, 'epoch': 0.18}
+{'loss': 0.4246, 'learning_rate': 3.5e-05, 'epoch': 0.18}
+{'loss': 0.4225, 'learning_rate': 3.6e-05, 'epoch': 0.19}
+{'loss': 0.3152, 'learning_rate': 3.7e-05, 'epoch': 0.19}
+{'loss': 0.307, 'learning_rate': 3.8e-05, 'epoch': 0.2}
+{'loss': 0.4628, 'learning_rate': 3.9000000000000006e-05, 'epoch': 0.2}
+{'loss': 0.1739, 'learning_rate': 4e-05, 'epoch': 0.21}
+{'loss': 0.2472, 'learning_rate': 4.1e-05, 'epoch': 0.21}
+{'loss': 0.2744, 'learning_rate': 4.2e-05, 'epoch': 0.22}
+{'loss': 0.3487, 'learning_rate': 4.3e-05, 'epoch': 0.22}
+{'loss': 0.3313, 'learning_rate': 4.4000000000000006e-05, 'epoch': 0.23}
+{'loss': 0.3024, 'learning_rate': 4.5e-05, 'epoch': 0.23}
+{'loss': 0.247, 'learning_rate': 4.600000000000001e-05, 'epoch': 0.24}
+{'loss': 0.2299, 'learning_rate': 4.7e-05, 'epoch': 0.24}
+{'loss': 0.4832, 'learning_rate': 4.8e-05, 'epoch': 0.25}
+{'loss': 0.5014, 'learning_rate': 4.9e-05, 'epoch': 0.26}
+{'loss': 0.2858, 'learning_rate': 5e-05, 'epoch': 0.26}
+{'loss': 0.4811, 'learning_rate': 4.990494296577947e-05, 'epoch': 0.27}
+{'loss': 0.3901, 'learning_rate': 4.980988593155894e-05, 'epoch': 0.27}
+{'loss': 0.2619, 'learning_rate': 4.971482889733841e-05, 'epoch': 0.28}
+{'loss': 0.2248, 'learning_rate': 4.9619771863117875e-05, 'epoch': 0.28}
+{'loss': 0.5436, 'learning_rate': 4.952471482889734e-05, 'epoch': 0.29}
+{'loss': 0.4037, 'learning_rate': 4.942965779467681e-05, 'epoch': 0.29}
+{'loss': 0.2247, 'learning_rate': 4.933460076045628e-05, 'epoch': 0.3}
+{'loss': 0.4302, 'learning_rate': 4.923954372623574e-05, 'epoch': 0.3}
+{'loss': 0.3714, 'learning_rate': 4.914448669201521e-05, 'epoch': 0.31}
+{'loss': 0.3638, 'learning_rate': 4.904942965779468e-05, 'epoch': 0.31}
+{'loss': 0.3187, 'learning_rate': 4.8954372623574146e-05, 'epoch': 0.32}
+{'loss': 0.2337, 'learning_rate': 4.8859315589353615e-05, 'epoch': 0.32}
+{'loss': 0.5316, 'learning_rate': 4.876425855513308e-05, 'epoch': 0.33}
+{'loss': 0.427, 'learning_rate': 4.866920152091255e-05, 'epoch': 0.33}
+{'loss': 0.2827, 'learning_rate': 4.857414448669202e-05, 'epoch': 0.34}
+{'loss': 0.3842, 'learning_rate': 4.847908745247148e-05, 'epoch': 0.34}
+{'loss': 0.3136, 'learning_rate': 4.8384030418250956e-05, 'epoch': 0.35}
+{'loss': 0.2314, 'learning_rate': 4.8288973384030424e-05, 'epoch': 0.35}
+{'loss': 0.3341, 'learning_rate': 4.8193916349809886e-05, 'epoch': 0.36}
+{'loss': 0.3961, 'learning_rate': 4.8098859315589354e-05, 'epoch': 0.36}
+{'loss': 0.2821, 'learning_rate': 4.800380228136883e-05, 'epoch': 0.37}
+{'loss': 0.4292, 'learning_rate': 4.790874524714829e-05, 'epoch': 0.38}
+{'loss': 0.227, 'learning_rate': 4.781368821292776e-05, 'epoch': 0.38}
+{'loss': 0.2736, 'learning_rate': 4.771863117870723e-05, 'epoch': 0.39}
+{'loss': 0.3633, 'learning_rate': 4.7623574144486695e-05, 'epoch': 0.39}
+{'loss': 0.2777, 'learning_rate': 4.7528517110266163e-05, 'epoch': 0.4}
+{'loss': 0.1569, 'learning_rate': 4.7433460076045625e-05, 'epoch': 0.4}
+{'loss': 0.2991, 'learning_rate': 4.73384030418251e-05, 'epoch': 0.41}
+{'loss': 0.3533, 'learning_rate': 4.724334600760457e-05, 'epoch': 0.41}
+{'loss': 0.3252, 'learning_rate': 4.714828897338403e-05, 'epoch': 0.42}
+{'loss': 0.4577, 'learning_rate': 4.70532319391635e-05, 'epoch': 0.42}
+{'loss': 0.3501, 'learning_rate': 4.695817490494297e-05, 'epoch': 0.43}
+{'loss': 0.2894, 'learning_rate': 4.6863117870722435e-05, 'epoch': 0.43}
+{'loss': 0.3863, 'learning_rate': 4.67680608365019e-05, 'epoch': 0.44}
+{'loss': 0.2912, 'learning_rate': 4.667300380228137e-05, 'epoch': 0.44}
+{'loss': 0.3846, 'learning_rate': 4.657794676806084e-05, 'epoch': 0.45}
+{'loss': 0.1524, 'learning_rate': 4.648288973384031e-05, 'epoch': 0.45}
+{'loss': 0.426, 'learning_rate': 4.6387832699619776e-05, 'epoch': 0.46}
+{'loss': 0.2554, 'learning_rate': 4.629277566539924e-05, 'epoch': 0.46}
+{'loss': 0.2257, 'learning_rate': 4.619771863117871e-05, 'epoch': 0.47}
+{'loss': 0.3795, 'learning_rate': 4.610266159695818e-05, 'epoch': 0.47}
+{'loss': 0.2447, 'learning_rate': 4.600760456273764e-05, 'epoch': 0.48}
+{'loss': 0.4157, 'learning_rate': 4.591254752851711e-05, 'epoch': 0.48}
+{'loss': 0.1829, 'learning_rate': 4.581749049429658e-05, 'epoch': 0.49}
+{'loss': 0.3703, 'learning_rate': 4.572243346007605e-05, 'epoch': 0.49}
+{'loss': 0.3228, 'learning_rate': 4.5627376425855515e-05, 'epoch': 0.5}
+{'loss': 0.4345, 'learning_rate': 4.553231939163498e-05, 'epoch': 0.51}
+{'loss': 0.2661, 'learning_rate': 4.543726235741445e-05, 'epoch': 0.51}
+{'loss': 0.307, 'learning_rate': 4.534220532319392e-05, 'epoch': 0.52}
+{'loss': 0.3019, 'learning_rate': 4.524714828897338e-05, 'epoch': 0.52}
+{'loss': 0.4279, 'learning_rate': 4.5152091254752856e-05, 'epoch': 0.53}
+{'loss': 0.285, 'learning_rate': 4.5057034220532325e-05, 'epoch': 0.53}
+{'loss': 0.3427, 'learning_rate': 4.4961977186311786e-05, 'epoch': 0.54}
+{'loss': 0.3454, 'learning_rate': 4.4866920152091254e-05, 'epoch': 0.54}
+{'loss': 0.3177, 'learning_rate': 4.477186311787073e-05, 'epoch': 0.55}
+{'loss': 0.3935, 'learning_rate': 4.467680608365019e-05, 'epoch': 0.55}
+{'loss': 0.3457, 'learning_rate': 4.458174904942966e-05, 'epoch': 0.56}
+{'loss': 0.3345, 'learning_rate': 4.448669201520913e-05, 'epoch': 0.56}
+{'loss': 0.2979, 'learning_rate': 4.4391634980988596e-05, 'epoch': 0.57}
+{'loss': 0.1937, 'learning_rate': 4.4296577946768064e-05, 'epoch': 0.57}
+{'loss': 0.4698, 'learning_rate': 4.4201520912547525e-05, 'epoch': 0.58}
+{'loss': 0.4078, 'learning_rate': 4.4106463878327e-05, 'epoch': 0.58}
+{'loss': 0.231, 'learning_rate': 4.401140684410647e-05, 'epoch': 0.59}
+{'loss': 0.4085, 'learning_rate': 4.391634980988593e-05, 'epoch': 0.59}
+{'loss': 0.5658, 'learning_rate': 4.38212927756654e-05, 'epoch': 0.6}
+{'loss': 0.2901, 'learning_rate': 4.3726235741444873e-05, 'epoch': 0.6}
+{'loss': 0.275, 'learning_rate': 4.3631178707224335e-05, 'epoch': 0.61}
+{'loss': 0.1925, 'learning_rate': 4.35361216730038e-05, 'epoch': 0.61}
+
+
+
+
+
+
+
+
+ 26% 1500/5760 [01:25<03:46, 18.81it/s]Saving model checkpoint to ./results/checkpoint-1500
+Configuration saved in ./results/checkpoint-1500/config.json
+Model weights saved in ./results/checkpoint-1500/pytorch_model.bin
+/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 19])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+
+
+
+
+
+
+
+
+
+
+
+
+ 35% 2000/5760 [01:53<03:18, 18.90it/s]Saving model checkpoint to ./results/checkpoint-2000
+Configuration saved in ./results/checkpoint-2000/config.json
+Model weights saved in ./results/checkpoint-2000/pytorch_model.bin
+/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 19])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+
+
+
+
+
+
+
+
+ 40% 2325/5760 [02:11<03:02, 18.80it/s]
+{'loss': 0.3991, 'learning_rate': 4.334600760456274e-05, 'epoch': 0.62}
+{'loss': 0.2018, 'learning_rate': 4.325095057034221e-05, 'epoch': 0.63}
+{'loss': 0.2344, 'learning_rate': 4.3155893536121676e-05, 'epoch': 0.64}
+{'loss': 0.2171, 'learning_rate': 4.3060836501901144e-05, 'epoch': 0.64}
+{'loss': 0.2542, 'learning_rate': 4.296577946768061e-05, 'epoch': 0.65}
+{'loss': 0.288, 'learning_rate': 4.2870722433460074e-05, 'epoch': 0.65}
+{'loss': 0.4296, 'learning_rate': 4.277566539923954e-05, 'epoch': 0.66}
+{'loss': 0.4604, 'learning_rate': 4.268060836501902e-05, 'epoch': 0.66}
+{'loss': 0.401, 'learning_rate': 4.258555133079848e-05, 'epoch': 0.67}
+{'loss': 0.3742, 'learning_rate': 4.249049429657795e-05, 'epoch': 0.67}
+{'loss': 0.2914, 'learning_rate': 4.2395437262357415e-05, 'epoch': 0.68}
+{'loss': 0.5041, 'learning_rate': 4.2300380228136884e-05, 'epoch': 0.68}
+{'loss': 0.251, 'learning_rate': 4.220532319391635e-05, 'epoch': 0.69}
+{'loss': 0.354, 'learning_rate': 4.211026615969582e-05, 'epoch': 0.69}
+{'loss': 0.1859, 'learning_rate': 4.201520912547529e-05, 'epoch': 0.7}
+{'loss': 0.3637, 'learning_rate': 4.192015209125476e-05, 'epoch': 0.7}
+{'loss': 0.3791, 'learning_rate': 4.1825095057034225e-05, 'epoch': 0.71}
+{'loss': 0.2991, 'learning_rate': 4.1730038022813686e-05, 'epoch': 0.71}
+{'loss': 0.3313, 'learning_rate': 4.163498098859316e-05, 'epoch': 0.72}
+{'loss': 0.5644, 'learning_rate': 4.153992395437263e-05, 'epoch': 0.72}
+{'loss': 0.2629, 'learning_rate': 4.144486692015209e-05, 'epoch': 0.73}
+{'loss': 0.2213, 'learning_rate': 4.134980988593156e-05, 'epoch': 0.73}
+{'loss': 0.4389, 'learning_rate': 4.125475285171103e-05, 'epoch': 0.74}
+{'loss': 0.3177, 'learning_rate': 4.1159695817490496e-05, 'epoch': 0.74}
+{'loss': 0.4485, 'learning_rate': 4.1064638783269964e-05, 'epoch': 0.75}
+{'loss': 0.2714, 'learning_rate': 4.096958174904943e-05, 'epoch': 0.76}
+{'loss': 0.3557, 'learning_rate': 4.08745247148289e-05, 'epoch': 0.76}
+{'loss': 0.2271, 'learning_rate': 4.077946768060837e-05, 'epoch': 0.77}
+{'loss': 0.323, 'learning_rate': 4.068441064638783e-05, 'epoch': 0.77}
+{'loss': 0.4331, 'learning_rate': 4.0589353612167306e-05, 'epoch': 0.78}
+{'loss': 0.2188, 'learning_rate': 4.0494296577946774e-05, 'epoch': 0.78}
+{'loss': 0.2101, 'learning_rate': 4.0399239543726235e-05, 'epoch': 0.79}
+{'loss': 0.3726, 'learning_rate': 4.0304182509505703e-05, 'epoch': 0.79}
+{'loss': 0.4329, 'learning_rate': 4.020912547528518e-05, 'epoch': 0.8}
+{'loss': 0.35, 'learning_rate': 4.011406844106464e-05, 'epoch': 0.8}
+{'loss': 0.4263, 'learning_rate': 4.001901140684411e-05, 'epoch': 0.81}
+{'loss': 0.2824, 'learning_rate': 3.9923954372623577e-05, 'epoch': 0.81}
+{'loss': 0.3468, 'learning_rate': 3.9828897338403045e-05, 'epoch': 0.82}
+{'loss': 0.1789, 'learning_rate': 3.973384030418251e-05, 'epoch': 0.82}
+{'loss': 0.3752, 'learning_rate': 3.9638783269961975e-05, 'epoch': 0.83}
+{'loss': 0.3303, 'learning_rate': 3.954372623574145e-05, 'epoch': 0.83}
+{'loss': 0.3645, 'learning_rate': 3.944866920152092e-05, 'epoch': 0.84}
+{'loss': 0.3564, 'learning_rate': 3.935361216730038e-05, 'epoch': 0.84}
+{'loss': 0.4043, 'learning_rate': 3.925855513307985e-05, 'epoch': 0.85}
+{'loss': 0.2107, 'learning_rate': 3.916349809885932e-05, 'epoch': 0.85}
+{'loss': 0.3201, 'learning_rate': 3.9068441064638784e-05, 'epoch': 0.86}
+{'loss': 0.1483, 'learning_rate': 3.897338403041825e-05, 'epoch': 0.86}
+{'loss': 0.3528, 'learning_rate': 3.887832699619772e-05, 'epoch': 0.87}
+{'loss': 0.4448, 'learning_rate': 3.878326996197719e-05, 'epoch': 0.88}
+{'loss': 0.3109, 'learning_rate': 3.868821292775666e-05, 'epoch': 0.88}
+{'loss': 0.5308, 'learning_rate': 3.8593155893536125e-05, 'epoch': 0.89}
+{'loss': 0.4377, 'learning_rate': 3.849809885931559e-05, 'epoch': 0.89}
+{'loss': 0.205, 'learning_rate': 3.840304182509506e-05, 'epoch': 0.9}
+{'loss': 0.3699, 'learning_rate': 3.830798479087453e-05, 'epoch': 0.9}
+{'loss': 0.2977, 'learning_rate': 3.821292775665399e-05, 'epoch': 0.91}
+{'loss': 0.2362, 'learning_rate': 3.811787072243346e-05, 'epoch': 0.91}
+{'loss': 0.3648, 'learning_rate': 3.802281368821293e-05, 'epoch': 0.92}
+{'loss': 0.3522, 'learning_rate': 3.7927756653992396e-05, 'epoch': 0.92}
+{'loss': 0.3825, 'learning_rate': 3.7832699619771865e-05, 'epoch': 0.93}
+{'loss': 0.2922, 'learning_rate': 3.773764258555133e-05, 'epoch': 0.93}
+{'loss': 0.4689, 'learning_rate': 3.76425855513308e-05, 'epoch': 0.94}
+{'loss': 0.3748, 'learning_rate': 3.754752851711027e-05, 'epoch': 0.94}
+{'loss': 0.2889, 'learning_rate': 3.745247148288973e-05, 'epoch': 0.95}
+{'loss': 0.1244, 'learning_rate': 3.7357414448669206e-05, 'epoch': 0.95}
+{'loss': 0.3857, 'learning_rate': 3.7262357414448674e-05, 'epoch': 0.96}
+{'loss': 0.3072, 'learning_rate': 3.7167300380228136e-05, 'epoch': 0.96}
+{'loss': 0.2769, 'learning_rate': 3.7072243346007604e-05, 'epoch': 0.97}
+{'loss': 0.2956, 'learning_rate': 3.697718631178708e-05, 'epoch': 0.97}
+{'loss': 0.3909, 'learning_rate': 3.688212927756654e-05, 'epoch': 0.98}
+{'loss': 0.1332, 'learning_rate': 3.678707224334601e-05, 'epoch': 0.98}
+{'loss': 0.4455, 'learning_rate': 3.669201520912548e-05, 'epoch': 0.99}
+{'loss': 0.4415, 'learning_rate': 3.6596958174904945e-05, 'epoch': 0.99}
+{'loss': 0.1734, 'learning_rate': 3.6501901140684413e-05, 'epoch': 1.0}
+{'loss': 0.3818, 'learning_rate': 3.6406844106463875e-05, 'epoch': 1.01}
+{'loss': 0.1831, 'learning_rate': 3.631178707224335e-05, 'epoch': 1.01}
+{'loss': 0.4001, 'learning_rate': 3.621673003802282e-05, 'epoch': 1.02}
+{'loss': 0.2999, 'learning_rate': 3.612167300380228e-05, 'epoch': 1.02}
+{'loss': 0.3956, 'learning_rate': 3.602661596958175e-05, 'epoch': 1.03}
+{'loss': 0.1556, 'learning_rate': 3.593155893536122e-05, 'epoch': 1.03}
+{'loss': 0.5472, 'learning_rate': 3.5836501901140684e-05, 'epoch': 1.04}
+{'loss': 0.3563, 'learning_rate': 3.574144486692015e-05, 'epoch': 1.04}
+{'loss': 0.4395, 'learning_rate': 3.564638783269962e-05, 'epoch': 1.05}
+{'loss': 0.2884, 'learning_rate': 3.555133079847909e-05, 'epoch': 1.05}
+{'loss': 0.3104, 'learning_rate': 3.545627376425856e-05, 'epoch': 1.06}
+{'loss': 0.2586, 'learning_rate': 3.5361216730038026e-05, 'epoch': 1.06}
+{'loss': 0.3546, 'learning_rate': 3.5266159695817494e-05, 'epoch': 1.07}
+{'loss': 0.6078, 'learning_rate': 3.517110266159696e-05, 'epoch': 1.07}
+{'loss': 0.3105, 'learning_rate': 3.5076045627376424e-05, 'epoch': 1.08}
+{'loss': 0.2556, 'learning_rate': 3.498098859315589e-05, 'epoch': 1.08}
+{'loss': 0.4924, 'learning_rate': 3.488593155893537e-05, 'epoch': 1.09}
+{'loss': 0.2379, 'learning_rate': 3.479087452471483e-05, 'epoch': 1.09}
+{'loss': 0.3129, 'learning_rate': 3.46958174904943e-05, 'epoch': 1.1}
+{'loss': 0.2102, 'learning_rate': 3.4600760456273765e-05, 'epoch': 1.1}
+{'loss': 0.2638, 'learning_rate': 3.450570342205323e-05, 'epoch': 1.11}
+{'loss': 0.4359, 'learning_rate': 3.44106463878327e-05, 'epoch': 1.11}
+{'loss': 0.2984, 'learning_rate': 3.431558935361217e-05, 'epoch': 1.12}
+{'loss': 0.3128, 'learning_rate': 3.422053231939164e-05, 'epoch': 1.12}
+{'loss': 0.3981, 'learning_rate': 3.4125475285171106e-05, 'epoch': 1.13}
+{'loss': 0.2982, 'learning_rate': 3.4030418250950574e-05, 'epoch': 1.14}
+{'loss': 0.3685, 'learning_rate': 3.3935361216730036e-05, 'epoch': 1.14}
+{'loss': 0.2536, 'learning_rate': 3.384030418250951e-05, 'epoch': 1.15}
+{'loss': 0.4392, 'learning_rate': 3.374524714828898e-05, 'epoch': 1.15}
+{'loss': 0.3738, 'learning_rate': 3.365019011406844e-05, 'epoch': 1.16}
+{'loss': 0.2233, 'learning_rate': 3.355513307984791e-05, 'epoch': 1.16}
+{'loss': 0.6658, 'learning_rate': 3.346007604562738e-05, 'epoch': 1.17}
+{'loss': 0.2468, 'learning_rate': 3.3365019011406846e-05, 'epoch': 1.17}
+{'loss': 0.3778, 'learning_rate': 3.3269961977186314e-05, 'epoch': 1.18}
+{'loss': 0.1768, 'learning_rate': 3.317490494296578e-05, 'epoch': 1.18}
+{'loss': 0.2714, 'learning_rate': 3.307984790874525e-05, 'epoch': 1.19}
+{'loss': 0.251, 'learning_rate': 3.298479087452472e-05, 'epoch': 1.19}
+{'loss': 0.3152, 'learning_rate': 3.288973384030418e-05, 'epoch': 1.2}
+{'loss': 0.192, 'learning_rate': 3.2794676806083655e-05, 'epoch': 1.2}
+
+
+
+
+ 43% 2500/5760 [02:21<02:52, 18.89it/s]Saving model checkpoint to ./results/checkpoint-2500
+Configuration saved in ./results/checkpoint-2500/config.json
+Model weights saved in ./results/checkpoint-2500/pytorch_model.bin
+/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 19])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+
+
+
+
+

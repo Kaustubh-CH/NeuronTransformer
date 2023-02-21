@@ -1,0 +1,37 @@
+Uncaught exception. Entering post mortem debugging
+Running 'cont' or 'step' will restart the program
+> /global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/_utils/pin_memory.py(53)pin_memory()
+-> return data.pin_memory(device)
+(Pdb)
+  0% 0/360 [00:00<?, ?it/s]/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/data/data_collator.py:119: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  batch["labels"] = torch.tensor([f["label"] for f in features], dtype=dtype)
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/pdb.py", line 1705, in main
+    pdb._runscript(mainpyfile)
+  File "/opt/conda/lib/python3.8/pdb.py", line 1573, in _runscript
+    self.run(statement)
+  File "/opt/conda/lib/python3.8/bdb.py", line 580, in run
+    exec(cmd, globals, locals)
+  File "<string>", line 1, in <module>
+  File "/global/u1/k/ktub1999/Neuron/NeuronTransformer/Ntran.py", line 133, in <module>
+    T.train()
+  File "/global/u1/k/ktub1999/Neuron/NeuronTransformer/Ntran.py", line 126, in train
+    trainer.train()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1749, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+    data = _utils.pin_memory.pin_memory(data, self._pin_memory_device)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/_utils/pin_memory.py", line 58, in pin_memory
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/_utils/pin_memory.py", line 58, in <dictcomp>
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in pin_memory
+    return data.pin_memory(device)
+(Pdb) Post mortem debugger finished. The /global/u1/k/ktub1999/Neuron/NeuronTransformer/Ntran.py will be restarted
+> /global/u1/k/ktub1999/Neuron/NeuronTransformer/Ntran.py(1)<module>()
+-> from toolbox.Dataloader_H5 import Dataset_h5_neuronInverter
+(Pdb)

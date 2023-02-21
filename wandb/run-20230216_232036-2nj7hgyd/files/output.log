@@ -1,0 +1,20 @@
+  0% 0/360 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "Ntran.py", line 181, in <module>
+    T.train()
+  File "Ntran.py", line 174, in train
+    trainer.train()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1749, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 61, in fetch
+    return self.collate_fn(data)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/data/data_collator.py", line 70, in default_data_collator
+    return torch_default_data_collator(features)
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/data/data_collator.py", line 119, in torch_default_data_collator
+    batch["labels"] = torch.tensor([f["label"] for f in features], dtype=dtype)
+ValueError: too many dimensions 'str'

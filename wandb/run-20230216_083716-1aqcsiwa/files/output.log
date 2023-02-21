@@ -1,0 +1,26 @@
+  0% 0/360 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "Ntran.py", line 67, in <module>
+    T.train()
+  File "Ntran.py", line 60, in train
+    trainer.train()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1749, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/global/u1/k/ktub1999/Neuron/NeuronTransformer/toolbox/Dataloader_H5.py", line 202, in __getitem__
+    f = interp1d(old_time, X, kind='linear')
+  File "/opt/conda/lib/python3.8/site-packages/scipy/interpolate/interpolate.py", line 429, in __init__
+    _Interpolator1D.__init__(self, x, y, axis=axis)
+  File "/opt/conda/lib/python3.8/site-packages/scipy/interpolate/polyint.py", line 54, in __init__
+    self._set_yi(yi, xi=xi, axis=axis)
+  File "/opt/conda/lib/python3.8/site-packages/scipy/interpolate/polyint.py", line 124, in _set_yi
+    raise ValueError("x and y arrays must be equal in length along "
+ValueError: x and y arrays must be equal in length along interpolation axis.

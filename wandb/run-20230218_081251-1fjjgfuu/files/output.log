@@ -1,0 +1,12 @@
+  0% 0/5760 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "Ntran.py", line 243, in <module>
+    T.train()
+  File "Ntran.py", line 236, in train
+    trainer.train()
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/global/homes/k/ktub1999/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1775, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "Ntran.py", line 78, in training_step
+    if self.use_amp:
+AttributeError: 'RegressionTrainer' object has no attribute 'use_amp'
