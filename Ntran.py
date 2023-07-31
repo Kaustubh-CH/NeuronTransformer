@@ -4,7 +4,8 @@ from transformers import AutoFeatureExtractor,AutoModelForAudioClassification
 import pandas as pd
 import os
 from torch.utils.data import  DataLoader
-from datasets import Dataset
+# from datasets import Dataset
+
 
 from torch import nn
 import torch
@@ -15,7 +16,7 @@ from torch.cuda.amp import autocast
 from transformers import AutoConfig
 from TransformerModel import Wav2Vec2ForNeuronData
 
-# from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset, DataLoader
 
 conf={
     'domain':'train'
@@ -31,7 +32,7 @@ conf['data_path']='/global/cfs/cdirs/m2043/balewski/neuronBBP3-10kHz_3pr_6stim/d
 conf['h5name']=os.path.join(conf['data_path'],conf['cell_name']+'.mlPack1.h5')
 conf['probs_select']=[0]
 conf['stims_select']=[0]
-conf['max_glob_samples_per_epoch']=2000
+# conf['max_glob_samples_per_epoch']=1500000
 
 def gen2(train_data):
     dic2={}
@@ -119,7 +120,8 @@ class Training():
     # self.train_dataloader = DataLoader(self.train_data[10], batch_size=1, shuffle=True)
     
     data_list =gen3(self.train_data)
-    self.train_dataset=Dataset.from_pandas(pd.DataFrame(data=data_list))
+    len(data_list)
+    # self.train_dataset=Dataset.from_pandas(pd.DataFrame(data=data_list))
     self.train_dataloader = DataLoader( self.train_dataset,
                           batch_size=16,
                           shuffle=True,
@@ -141,8 +143,8 @@ class Training():
                           drop_last=True,
                           pin_memory=torch.cuda.is_available())
     # self.valid_ds = Dataset
-    data_list =gen3(self.valid_data)
-    self.valid_dataset=Dataset.from_pandas(pd.DataFrame(data=data_list))
+    # data_list =gen3(self.valid_data)
+    # self.valid_dataset=Dataset.from_pandas(pd.DataFrame(data=data_list))
     # for data in gen2(self.valid_data):
     #   data_list.append()
     # print(self.valid_ds)
@@ -195,7 +197,7 @@ class Training():
     
     loss_fct=nn.MSELoss()
     training_args = TrainingArguments(
-    output_dir='./results',          # output directory
+    output_dir='./results/'+str(os.environ['SLURM_JOB_ID']),          # output directory
     num_train_epochs=3,              # total number of training epochs
     per_device_train_batch_size=1,  # batch size per device during training
     per_device_eval_batch_size=64,   # batch size for evaluation
@@ -230,8 +232,8 @@ class Training():
     trainer = RegressionTrainer(
     model=model,                         # the instantiated 🤗 Transformers model to be trained
     args=training_args,                  # training arguments, defined above
-    train_dataset=self.train_dataset,         # training dataset
-    eval_dataset=self.valid_dataset             # evaluation dataset
+    train_dataset=self.train_data,         # training dataset
+    eval_dataset=self.valid_data             # evaluation dataset
     )
     trainer.train()
 

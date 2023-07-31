@@ -221,5 +221,5 @@ class Dataset_h5_neuronInverter(Dataset):
         item["input_values"]=new_data_X
         item['labels']=Y
         # return item
-        return (new_data_X,Y)
+        return (item)
 

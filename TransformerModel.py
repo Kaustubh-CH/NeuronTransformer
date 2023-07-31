@@ -56,7 +56,7 @@ class Wav2Vec2ForNeuronData(Wav2Vec2PreTrainedModel):
     def forward(
             self,
             input_values,
-            labels,
+            labels=None,
             attention_mask=None, #When using input with different sizes
             output_attentions=None, #to output the attentions
             output_hidden_states=None, 
@@ -73,10 +73,11 @@ class Wav2Vec2ForNeuronData(Wav2Vec2PreTrainedModel):
         output = self.regress(hidden_states)
         loss = None
         loss_fct = nn.MSELoss()
-        loss = loss_fct(output.view(-1, self.num_labels), labels)
+        if(labels):
+            loss = loss_fct(output.view(-1, self.num_labels), labels)
 
         output = (output,) + outputs[2:]
-        return ((loss,) + output) if loss is not None else output
+        return ((loss,) + output) if labels is not None else output
     
     
 
