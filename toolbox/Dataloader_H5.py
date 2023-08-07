@@ -150,6 +150,22 @@ class Dataset_h5_neuronInverter(Dataset):
             
         #print('AA2',volts.shape,self.data_frames.shape,dom) 
         self.data_parU=h5f[dom+'_unit_par'][sampIdxOff:sampIdxOff+locSamp]
+        
+        old_time = np.linspace(0, 1, 4000)
+        np.resize(old_time,(len(old_time),1))
+        new_time = np.linspace(0, 1, 6400)
+        np.resize(new_time,(len(new_time),1))
+        f = interp1d(old_time, self.data_frames, kind='linear', axis=1)
+        self.data_frames_old =  self.data_frames
+        self.data_frames = f(new_time)
+
+        from transformers import Wav2Vec2Processor
+        self.processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base",)
+        target_sampling_rate = self.processor.feature_extractor.sampling_rate
+        self.data_frames=np.squeeze(self.data_frames)
+        result = self.processor(self.data_frames, sampling_rate=target_sampling_rate)
+        self.data_frames=np.array(result['input_values'])    
+
 
         if cf['world_rank']==0:
             blob=h5f['meta.JSON'][0]
@@ -205,21 +221,19 @@ class Dataset_h5_neuronInverter(Dataset):
         assert idx>=0
         assert idx< self.numLocFrames
         X=self.data_frames[idx]
-        old_time = np.linspace(0, 1, 4000)
-        np.resize(old_time,(len(X),1))
-        new_time = np.linspace(0, 1, 16000)
-        np.resize(new_time,(len(new_time),1))
-        f = interp1d(old_time, X.squeeze(), kind='linear')
-        new_data_X = f(new_time)
-        np.resize(new_data_X,(len(new_data_X),1))
         Y=self.data_parU[idx]
         item ={}
         # device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         # new_data_X =  torch.from_numpy(new_data_X).to(device,dtype=torch.float)
         # new_data_X = float(new_data_X)
+        
+        
+        # target_sampling_rate = self.processor.feature_extractor.sampling_rate
+        # result = self.processor(X, sampling_rate=target_sampling_rate)
+        # result['labels']=Y
 
-        item["input_values"]=new_data_X
+        item["input_values"]=X
         item['labels']=Y
-        # return item
-        return (item)
+        return item
+        # return result
 

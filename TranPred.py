@@ -22,23 +22,13 @@ class plots():
         self.fig.savefig("predictions.png")
 
 
-def gen3(train_data):
-    dic2=[]
-    for idx in range(len(train_data)):
-      val, lab = train_data.__getitem__(idx)
-      dic={}
-      dic["input_values"]=val
-      dic["labels"]=lab
-      dic2.append(dic)
-    return dic2
-
 config = AutoConfig.from_pretrained(
-    "/pscratch/sd/k/ktub1999/NeuronTransformer/results/checkpoint-118000",
+    "/pscratch/sd/k/ktub1999/NeuronTransformer/results/13284595/checkpoint-6400",
     num_labels=19,
     )
 setattr(config, 'pooling_mode', "mean")
 model = Wav2Vec2ForNeuronData.from_pretrained(
-    "/pscratch/sd/k/ktub1999/NeuronTransformer/results/checkpoint-118000",
+    "/pscratch/sd/k/ktub1999/NeuronTransformer/results/13284595/checkpoint-6400",
     config=config
     )
 
@@ -50,10 +40,10 @@ conf['world_rank'] = 0
 # conf['world_rank']=os.environ['SLURM_PROCID']
 # conf['world_size']=int(os.environ['SLURM_NTASKS'])
 conf['world_size']=1
-conf['cell_name']="L5_TTPC1cADpyr2"
+conf['cell_name']="L5_TTPC1cADpyr0"
 conf['shuffle']=True
 conf['local_batch_size']=128
-conf['data_path']='/global/cfs/cdirs/m2043/balewski/neuronBBP3-10kHz_3pr_6stim/dec26_mlPack1/'
+conf['data_path']='/pscratch/sd/k/ktub1999/bbp_May_08_19/'
 conf['h5name']=os.path.join(conf['data_path'],conf['cell_name']+'.mlPack1.h5')
 conf['probs_select']=[0]
 conf['stims_select']=[0]
@@ -63,7 +53,11 @@ train_data=Dataset_h5_neuronInverter(conf,0)
 
 P = plots()
 for data in range(len(train_data)):
-    val, lab = train_data.__getitem__(data)
+    if(data%100==0):
+        print("Done",data)
+    item = train_data.__getitem__(data)
+    val = item["input_values"]
+    lab = item["labels"]
     # val.reshape((1,len(val)))
     val=torch.from_numpy(val)
     dataInp=val.float()
@@ -87,4 +81,4 @@ P.savePlot()
 
 
 # Show the plot
-plt.savefig("test.png")
+plt.savefig("testNewTransformer.png")

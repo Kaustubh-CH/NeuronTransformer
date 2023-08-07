@@ -168,7 +168,7 @@ class Plotter_NeuronInverter(Plotter_Backbone):
         txt3+='\ntrain.loss valid %.3g'%(sumRec['loss_valid'])
         txt3+='\npred.loss %s %.3g'%(sumRec['domain'],sumRec[sumRec['domain']+'LossMSE'])
         txt3+='\ninp:'+str(sumRec['inpShape'])+',  nSampl=%d'%(u.shape[0])
-        txt3+='\n train ranks=%d  time/min=%.1f '%(sumRec['trainRanks'],sumRec['trainTime']/60.)
+        # txt3+='\n train ranks=%d  time/min=%.1f '%(sumRec['trainRanks'],sumRec['trainTime']/60.)
         txt3+='\n'+tit4
         ax1=axs[j]
         ax1.text(0.02,0.2,txt3,transform=ax1.transAxes)

@@ -73,7 +73,7 @@ class Wav2Vec2ForNeuronData(Wav2Vec2PreTrainedModel):
         output = self.regress(hidden_states)
         loss = None
         loss_fct = nn.MSELoss()
-        if(labels):
+        if(labels!=None):
             loss = loss_fct(output.view(-1, self.num_labels), labels)
 
         output = (output,) + outputs[2:]

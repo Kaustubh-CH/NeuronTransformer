@@ -10,5 +10,8 @@
 #SBATCH --output logs/%A_%a  # job-array encodding
 #SBATCH --image=nersc/pytorch:ngc-21.08-v2
 #SBATCH --array 1-1 #a
+#SBATCH --gpus-per-task=1
 
-srun -n 1 shifter python3 Ntran.py
+data_path=/pscratch/sd/k/ktub1999/bbp_May_18_8944917/
+srun -n 1 shifter python3 Ntran2.py --data_path $data_path
+
